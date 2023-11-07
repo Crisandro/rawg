@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{ title }}</span>
+  <span class="example-spacer"></span>
+  <mat-slide-toggle
+      color="accent"
+      (change)="setTheme()"
+      >
+    Slide me!
+  </mat-slide-toggle>
+</mat-toolbar>
+<router-outlet></router-outlet>

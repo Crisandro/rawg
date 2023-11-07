@@ -1,0 +1,22 @@
+<mat-card class="game-container">
+    <div class="game-cards">
+        <div class="card-body" *ngFor="let game of games">
+            <img [src]="game.background_image" class="card-image"  [routerLink]="['/gameDetails', game.id]"/>
+            <div class="card-content">
+                <div class="game-title"><h3><strong>{{ game.name }}</strong></h3></div>
+                <div class="card-genres">
+                    <div *ngFor="let genre of game.genres" class="card-genre">
+                        {{ genre.name }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <mat-paginator color="primary" [length]="results_count"
+              [pageSize]="page_size"
+              (page)="handlePageEvent($event)"
+              [pageSizeOptions]="[5, 10, 25, 40]"
+              aria-label="Select page"
+              >
+    </mat-paginator>
+</mat-card>

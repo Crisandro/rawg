@@ -1,0 +1,75 @@
+.game-container{
+    height: 93.2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.game-cards{
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 100%;
+    justify-content: space-around;
+}
+
+.card-body{
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background-color: darkgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: 500ms;
+}
+
+.card-body:hover {
+    scale: 1.15;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.card-image{
+    position: absolute;
+    z-index: 0;
+    object-fit: cover;
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    filter: opacity(40%);
+}
+
+.card-content{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card-genres{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+    width: 100%;
+    font-size: x-small;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-genre{
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: darkslategrey;
+}
