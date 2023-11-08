@@ -13,13 +13,16 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import { GameHomeComponent } from './game-home/game-home.component';
 import {MatCardModule} from '@angular/material/card';
 import { GameDetailsComponent } from './game-details/game-details.component';
+import { StarRatingComponent } from './star-rating/star-rating.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GameHomeComponent,
-    GameDetailsComponent
+    GameDetailsComponent,
+    StarRatingComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import { GameDetailsComponent } from './game-details/game-details.component';
     MatIconModule,
     MatSlideToggleModule,
     MatPaginatorModule,
-    MatCardModule
+    MatCardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
