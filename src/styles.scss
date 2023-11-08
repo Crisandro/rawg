@@ -51,7 +51,7 @@ $dark-theme: mat.define-dark-theme(
 );
 
 .color-scheme-dark {
-  @include mat.all-component-themes($dark-theme);
+  @include mat.all-component-colors($dark-theme);
   // @include mat.core-color($dark-theme);
   // @include mat.button-color($dark-theme);
   // @include mat.icon-color($dark-theme);
