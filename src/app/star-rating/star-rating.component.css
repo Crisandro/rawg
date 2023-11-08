@@ -1,0 +1,17 @@
+.crop {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+}
+div {
+    color: yellow;
+    display: flex;
+}
+
+.behind-star{
+    color:black;
+}
+
+.star-container{
+    position: relative;
+}
