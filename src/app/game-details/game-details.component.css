@@ -4,12 +4,38 @@
     height: 93.1%;
     overflow: hidden;
     padding: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.details-background{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    filter: opacity();
+.details-info{
+    width: 600px;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.details-image{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    background-color: darkgrey;
+}
+
+.details-title-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.details-title{
+
+}
+
+.details-description{
+    flex-wrap: wrap;
+    font-size: 1rem;
 }

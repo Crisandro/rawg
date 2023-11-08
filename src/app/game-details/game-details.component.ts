@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { GameApiService } from '../game-api.service';
+import { iGameApi } from '../game-api';
 
 @Component({
   selector: 'app-game-details',
@@ -8,7 +9,7 @@ import { GameApiService } from '../game-api.service';
   styleUrls: ['./game-details.component.css','./game-details.component.scss']
 })
 export class GameDetailsComponent implements OnInit {
-  gameDetails: any= {};
+  gameDetails!: iGameApi;
   gameMovies!: any[];
   id!: any;
   constructor(
@@ -17,19 +18,20 @@ export class GameDetailsComponent implements OnInit {
     ){}
 
   ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id')!;
-    console.log(this.id)
+    this.id = this.route.snapshot.paramMap.get('id');
     this.getGameDetails(this.id)
   }
 
   getGameDetails(id: number): void{
     this.gameService.getGameDetails(id).subscribe(response => {
-      console.log(response)
+      
       this.gameDetails = response
+      console.log(this.gameDetails)
     })
     this.gameService.getGameMovies(id).subscribe(response => {
-      console.log(response.results)
+      
       this.gameMovies = response.results
+      console.log(this.gameMovies)
     })
   }
 
